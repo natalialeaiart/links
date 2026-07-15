@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# При переезде на Vercel заменить адрес sitemap на новый домен
+Sitemap: https://natalialeaiart.github.io/links/sitemap.xml
