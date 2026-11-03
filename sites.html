@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Natalia Le — Sites &amp; Bots: сайты, инструменты, GPT-боты и Telegram-боты</title>
+  <meta name="description" content="Сайты, лендинги, GPT-боты и Telegram-боты Natalia Le — сделаны с AI: Hub Curious, портфолио, релиз Nathaniel Vampire, AI Edit Lab и другие.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://links-nataliale.pages.dev/sites.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Natalia Le — Sites &amp; Bots">
+  <meta property="og:description" content="Сайты, лендинги и боты, сделанные с AI.">
+  <meta property="og:url" content="https://links-nataliale.pages.dev/sites.html">
+  <meta property="og:image" content="https://links-nataliale.pages.dev/og-image.png">
+  <meta property="og:locale" content="ru_RU">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --paper: #DCE1E5;
+      --ink: #14171C;
+      --ink-soft: #39404A;
+      --muted: #64707C;
+      --line: rgba(20, 23, 28, 0.5);
+      --line-soft: rgba(20, 23, 28, 0.16);
+      --wine: #6E1A28;
+      --wine-deep: #57121E;
+      --wine-soft: #9E3A49;
+      --wine-light: #F1DDE0;
+      --tint: rgba(158, 58, 73, 0.26);
+      --card: #1B1F25;
+      --raised: #E6EAED;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Montserrat', system-ui, sans-serif;
+      --gutter: clamp(16px, 3.4vw, 44px);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Бумажное зерно */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 50;
+      opacity: 0.5;
+      mix-blend-mode: multiply;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.09'/%3E%3C/svg%3E");
+    }
+
+    a { color: inherit; }
+
+    .page {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 var(--gutter) 40px;
+    }
+
+    .arrow { width: 28px; height: 12px; flex-shrink: 0; transition: transform 0.35s ease; }
+    .arrow path { fill: none; stroke: currentColor; stroke-width: 1.3; }
+
+    /* ===== Шапка ===== */
+    .topbar {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 30px 0 12px;
+      border-bottom: 1px solid var(--line);
+    }
+    .wordmark {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: clamp(1.7rem, 3.4vw, 2.9rem);
+      line-height: 1;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 4px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+    .back .arrow { transform: scaleX(-1); }
+    @media (hover: hover) {
+      .back:hover .arrow { transform: scaleX(-1) translateX(5px); }
+    }
+
+    /* ===== Заголовок страницы ===== */
+    .intro { padding: clamp(30px, 4.4vw, 60px) 0 clamp(28px, 3.6vw, 44px); }
+
+    .headline {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: clamp(2.8rem, 8vw, 7rem);
+      line-height: 0.98;
+      letter-spacing: -0.025em;
+    }
+    .headline .amp { font-style: italic; color: var(--wine); }
+
+    .hl { position: relative; display: inline-block; z-index: 0; }
+    .hl::after {
+      content: '';
+      position: absolute;
+      left: 10%;
+      right: -16%;
+      bottom: -0.12em;
+      height: 0.3em;
+      z-index: -1;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 44' preserveAspectRatio='none'%3E%3Cpath d='M2 30 C70 20 170 12 298 4 L294 15 C220 18 140 26 60 36 C40 38 18 41 6 42 Z' fill='%239E3A49'/%3E%3Cpath d='M30 38 C110 30 200 24 286 20 L282 24 C200 28 120 34 34 41 Z' fill='%239E3A49' opacity='0.7'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+      transform-origin: left center;
+      animation: brush 0.9s 0.5s cubic-bezier(0.6, 0, 0.2, 1) both;
+    }
+    @keyframes brush { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+    .lede {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      max-width: 760px;
+      margin-top: clamp(18px, 2.4vw, 30px);
+      font-size: clamp(0.92rem, 1.25vw, 1.08rem);
+      color: var(--ink-soft);
+    }
+    .lede::before {
+      content: '';
+      width: 52px;
+      height: 1px;
+      background: var(--ink);
+      flex-shrink: 0;
+    }
+
+    /* ===== Метки секций ===== */
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 46px 0 22px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.42em;
+      text-transform: uppercase;
+    }
+    .section-label:first-of-type { margin-top: 0; }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--line);
+    }
+    .section-label .count { color: var(--wine); letter-spacing: 0.1em; }
+
+    /* ===== Карточки сайтов ===== */
+    .sites {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px 24px;
+    }
+
+    .site { display: flex; flex-direction: column; min-width: 0; }
+
+    /* Первый сайт — крупно, превью слева */
+    .site.featured {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1.45fr 1fr;
+      gap: 0 34px;
+      align-items: center;
+    }
+
+    .preview {
+      display: block;
+      background: var(--card);
+      text-decoration: none;
+      box-shadow: 0 1px 0 var(--line-soft), 0 24px 40px -30px rgba(20, 23, 28, 0.6);
+      transition: box-shadow 0.4s ease, transform 0.4s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .browser-bar {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 14px;
+      color: rgba(238, 240, 242, 0.72);
+      font-size: 0.72rem;
+      letter-spacing: 0.04em;
+    }
+    .browser-bar i {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(238, 240, 242, 0.26);
+    }
+    .browser-bar i:nth-child(3) { background: var(--wine-soft); }
+    .browser-bar span {
+      margin-left: 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .shot {
+      display: block;
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background: #2A2F36;
+    }
+    .shot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 0;
+      display: block;
+      transition: object-position 6s cubic-bezier(0.45, 0, 0.3, 1);
+    }
+
+    /* Превью прокручивает сайт вниз при наведении */
+    @media (hover: hover) {
+      .preview:hover { transform: translateY(-3px); box-shadow: 0 1px 0 var(--line-soft), 0 30px 48px -28px rgba(20, 23, 28, 0.75); }
+      .preview:hover .shot img { object-position: 50% 100%; }
+    }
+    .preview:focus-visible { outline: 2px solid var(--wine); outline-offset: 4px; }
+
+    .site-body { padding-top: 18px; }
+    .site.featured .site-body { padding-top: 0; }
+
+    .site-tag {
+      display: block;
+      font-size: 0.66rem;
+      font-weight: 600;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--wine);
+      margin-bottom: 8px;
+    }
+    .site-title {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: clamp(1.6rem, 2.5vw, 2.3rem);
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+    }
+    .site.featured .site-title { font-size: clamp(2rem, 3.6vw, 3.4rem); }
+    .site-desc {
+      max-width: 560px;
+      font-size: 0.9rem;
+      color: var(--ink-soft);
+    }
+    .here {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 3px 8px;
+      vertical-align: middle;
+      background: var(--wine);
+      color: var(--wine-light);
+      font-family: var(--font-sans);
+      font-size: 0.58rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .site-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 22px;
+      margin-top: 16px;
+    }
+    .site-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding-bottom: 3px;
+      border-bottom: 1px solid var(--line);
+      transition: border-color 0.3s ease, color 0.3s ease;
+    }
+    @media (hover: hover) {
+      .site-links a:hover { color: var(--wine); border-color: var(--wine); }
+      .site-links a:hover .arrow { transform: translateX(4px); }
+    }
+
+    /* ===== Боты ===== */
+    .bots {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .bot {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 22px 22px 22px 0;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .bot:nth-child(even) { padding-left: 22px; }
+    .bot:nth-child(n+3) { border-top: 1px solid var(--line-soft); }
+    .bot:nth-child(even)::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 22%;
+      bottom: 22%;
+      width: 1px;
+      background: var(--line-soft);
+    }
+    .bot-icon {
+      display: grid;
+      place-items: center;
+      width: 52px;
+      height: 52px;
+      flex-shrink: 0;
+      background: var(--card);
+      transition: background 0.3s ease;
+    }
+    .bot-icon svg { width: 24px; height: 24px; fill: var(--paper); }
+    .bot-name {
+      display: block;
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      line-height: 1.15;
+    }
+    .bot-kind {
+      display: block;
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--wine);
+      margin-bottom: 3px;
+    }
+    .bot-desc { display: block; font-size: 0.84rem; color: var(--ink-soft); }
+    .bot .arrow { margin-left: auto; }
+    @media (hover: hover) {
+      .bot:hover .bot-icon { background: var(--wine); }
+      .bot:hover .arrow { transform: translateX(5px); }
+    }
+    .bot:focus-visible { outline: 2px solid var(--wine); outline-offset: 2px; }
+
+    .bots-note { margin-top: 12px; font-size: 0.82rem; color: var(--muted); }
+
+    /* ===== Портфолио ===== */
+    .portfolio {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 46px;
+      padding: clamp(22px, 3vw, 34px) clamp(22px, 3vw, 38px);
+      background: var(--wine);
+      color: var(--wine-light);
+      text-decoration: none;
+      transition: background 0.3s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .portfolio-eyebrow {
+      display: block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .portfolio-title {
+      display: block;
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: clamp(2.1rem, 4.6vw, 3.8rem);
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+    }
+    .portfolio .arrow { width: 56px; height: 24px; }
+    .portfolio .arrow path { stroke-width: 1.1; }
+    @media (hover: hover) {
+      .portfolio:hover { background: var(--wine-deep); }
+      .portfolio:hover .arrow { transform: translateX(8px); }
+    }
+    .portfolio:focus-visible { outline: 2px solid var(--wine); outline-offset: 4px; }
+
+    /* ===== Футер ===== */
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 10px 24px;
+      margin-top: 34px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line-soft);
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+    }
+    footer a {
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--ink);
+      background: linear-gradient(var(--tint), var(--tint)) 0 100% / 100% 40% no-repeat;
+    }
+    .footer-meta {
+      font-size: 0.68rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+    }
+
+    /* ===== Появление при загрузке ===== */
+    .reveal { animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: var(--d, 0s); }
+    @keyframes rise { from { opacity: 0; transform: translateY(14px); } }
+
+    /* ===== Адаптив ===== */
+    @media (max-width: 900px) {
+      .site.featured { grid-template-columns: 1fr; }
+      .site.featured .site-body { padding-top: 18px; }
+    }
+
+    @media (max-width: 700px) {
+      .sites { grid-template-columns: 1fr; gap: 36px; }
+      .bots { grid-template-columns: 1fr; }
+      .bot, .bot:nth-child(even) { padding: 18px 0; }
+      .bot + .bot { border-top: 1px solid var(--line-soft); }
+      .bot:nth-child(even)::before { display: none; }
+      .lede { gap: 14px; }
+      .lede::before { width: 28px; }
+      .section-label { letter-spacing: 0.3em; font-size: 0.72rem; }
+      .back { letter-spacing: 0.18em; }
+      .portfolio { align-items: center; }
+      .portfolio-eyebrow { letter-spacing: 0.18em; font-size: 0.62rem; }
+      .portfolio .arrow { width: 40px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <header class="topbar reveal">
+      <a class="wordmark" href="./">Nataliale</a>
+      <a class="back" href="./"><svg class="arrow" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5"/></svg>All links</a>
+    </header>
+
+    <section class="intro">
+      <h1 class="headline reveal" style="--d:.1s">Sites <span class="amp">&amp;</span> <span class="hl">Bots</span></h1>
+      <p class="lede reveal" style="--d:.25s">Web projects, tools &amp; automations — designed and built with AI, from a written brief to a live site on its own domain.</p>
+    </section>
+
+    <main>
+      <!-- ===== Сайты ===== -->
+      <p class="section-label reveal" style="--d:.3s">Websites <span class="count">05</span></p>
+      <div class="sites">
+
+        <article class="site featured reveal" style="--d:.35s">
+          <a class="preview" href="https://hubcurious.com/" target="_blank" rel="noopener" aria-label="Открыть hubcurious.com">
+            <span class="browser-bar"><i></i><i></i><i></i><span>hubcurious.com</span></span>
+            <span class="shot"><img src="img/sites/hubcurious.jpg" alt="Главная страница блога Hub Curious" width="800" height="1333"></span>
+          </a>
+          <div class="site-body">
+            <span class="site-tag">Blog · Custom CMS</span>
+            <h2 class="site-title">Hub Curious</h2>
+            <p class="site-desc">My personal blog with its own CMS — an admin panel where I write, edit and publish
+            articles and upload photos, no code needed. Built in three days with Claude Code; runs on
+            Cloudflare for the price of a domain.</p>
+            <div class="site-links">
+              <a href="https://hubcurious.com/" target="_blank" rel="noopener">Visit site <svg class="arrow" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5"/></svg></a>
+              <a href="https://hubcurious.com/ai/how-i-built-this-site" target="_blank" rel="noopener">How I built it <svg class="arrow" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="site reveal" style="--d:.42s">
+          <a class="preview" href="https://ainataliale.pages.dev/" target="_blank" rel="noopener" aria-label="Открыть ainataliale.pages.dev">
+            <span class="browser-bar"><i></i><i></i><i></i><span>ainataliale.pages.dev</span></span>
+            <span class="shot"><img src="img/sites/portfolio.jpg" alt="Портфолио Natalia Le" width="800" height="1333" loading="lazy"></span>
+          </a>
+          <div class="site-body">
+            <span class="site-tag">Portfolio</span>
+            <h2 class="site-title">AI Portfolio</h2>
+            <p class="site-desc">My portfolio — dark editorial design, video showreel and a filterable work grid.
+            Built with AI-assisted development, no prior programming background.</p>
+            <div class="site-links">
+              <a href="https://ainataliale.pages.dev/" target="_blank" rel="noopener">Visit site <svg class="arrow" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5"/></svg></a>
+              <a href="https://github.com/natalialeaiart/aiportfolio" target="_blank" rel="noopener">GitHub <svg class="arrow" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="site reveal" style="--d:.49s">
+          <a class="preview" href="https://nathanielvampire.pages.dev/" target="_blank" rel="noopener" aria-label="Открыть nathanielvampire.pages.dev">
+            <span class="browser-bar"><i></i><i></i><i></i><span>nathanielvampire.pages.dev</span></span>
+            <span class="shot"><img src="img/sites/nathaniel.jpg" alt="Страница релиза Nathaniel Vampire — My Mortal Thing" width="800" height="1333" loading="lazy"></span>
+          </a>
+          <div class="site-body">
+            <span class="site-tag">Landing · AI artist release</span>
+            <h2 class="site-title">Nathaniel Vampire — My Mortal Thing</h2>
+            <p class="site-desc">A release page for the debut single of AI singer Nathaniel Vampire:
+            cover, story and links to Spotify, YouTube Music and Apple Music.</p>
+            <div class="site-links">
+              <a href="https://nathanielvampire.pages.dev/" target="_blank" rel="noopener">Visit site <svg class="arrow" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="site reveal">
+          <a class="preview" href="https://links-lilprompt.vercel.app/" target="_blank" rel="noopener" aria-label="Открыть links-lilprompt.vercel.app">
+            <span class="browser-bar"><i></i><i></i><i></i><span>links-lilprompt.vercel.app</span></span>
+            <span class="shot"><img src="img/sites/lilprompt.jpg" alt="Лендинг Lil Prompt Official" width="800" height="1333" loading="lazy"></span>
+          </a>
+          <div class="site-body">
+            <span class="site-tag">Landing · For an AI artist</span>
+            <h2 class="site-title">Lil Prompt Official</h2>
+            <p class="site-desc">A link-in-bio landing page for AI artist Lil Prompt: all channels,
+            videos and a built-in music player in one place, styled to match his brand.</p>
+            <div class="site-links">
+              <a href="https://links-lilprompt.vercel.app/" target="_blank" rel="noopener">Visit site <svg class="arrow" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="site reveal">
+          <a class="preview" href="./" aria-label="Открыть главную страницу ссылок">
+            <span class="browser-bar"><i></i><i></i><i></i><span>links-nataliale.pages.dev</span></span>
+            <span class="shot"><img src="img/sites/links.jpg" alt="Страница ссылок Natalia Le" width="800" height="697" loading="lazy"></span>
+          </a>
+          <div class="site-body">
+            <span class="site-tag">Link in bio · Personal</span>
+            <h2 class="site-title">Natalia Le — Links <span class="here">You are here</span></h2>
+            <p class="site-desc">My own link-in-bio page in an editorial style: AI visuals, video,
+            Nathaniel Vampire’s single, sites and bots, all socials and GPT tools in one place.</p>
+            <div class="site-links">
+              <a href="./">Open <svg class="arrow" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5"/></svg></a>
+              <a href="https://github.com/natalialeaiart/links" target="_blank" rel="noopener">GitHub <svg class="arrow" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ===== Инструменты и гайды ===== -->
+      <p class="section-label">Tools &amp; guides <span class="count">02</span></p>
+      <div class="sites">
+
+        <article class="site">
+          <a class="preview" href="https://ai-edit-lab.pages.dev/" target="_blank" rel="noopener" aria-label="Открыть ai-edit-lab.pages.dev">
+            <span class="browser-bar"><i></i><i></i><i></i><span>ai-edit-lab.pages.dev</span></span>
+            <span class="shot"><img src="img/sites/editlab.jpg" alt="AI Edit Lab" width="800" height="1333" loading="lazy"></span>
+          </a>
+          <div class="site-body">
+            <span class="site-tag">Product · Video editing</span>
+            <h2 class="site-title">AI Edit Lab</h2>
+            <p class="site-desc">My first product: a step-by-step method for swapping the background and outfits
+            in real footage with Seedance 2.5 — generate a precise edit prompt, upload your video with a
+            reference and get the edited shot.</p>
+            <div class="site-links">
+              <a href="https://ai-edit-lab.pages.dev/" target="_blank" rel="noopener">Open AI Edit Lab <svg class="arrow" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="site">
+          <a class="preview" href="https://ai-outpainting-guide.vercel.app/" target="_blank" rel="noopener" aria-label="Открыть ai-outpainting-guide.vercel.app">
+            <span class="browser-bar"><i></i><i></i><i></i><span>ai-outpainting-guide.vercel.app</span></span>
+            <span class="shot"><img src="img/sites/outpaint.jpg" alt="AI Outpainting Guide" width="800" height="1333" loading="lazy"></span>
+          </a>
+          <div class="site-body">
+            <span class="site-tag">Guide · Outpainting</span>
+            <h2 class="site-title">AI Outpainting Guide</h2>
+            <p class="site-desc">A guide and a master prompt for expanding the frame of a finished image
+            or video — the original stays untouched, the scene grows around it.</p>
+            <div class="site-links">
+              <a href="https://ai-outpainting-guide.vercel.app/" target="_blank" rel="noopener">Open guide <svg class="arrow" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- ===== Telegram-боты ===== -->
+      <p class="section-label">Bots <span class="count">04</span></p>
+      <nav class="bots" aria-label="GPT-боты и Telegram-боты">
+        <a class="bot" href="https://chatgpt.com/g/g-6a0c1d49fd8881918612b56af8e14943-ai-carousel-creative-director" target="_blank" rel="noopener">
+          <span class="bot-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5l2.6 6.4 6.9.6-5.2 4.6 1.6 6.8L12 16.3l-5.9 3.6 1.6-6.8L2.5 8.5l6.9-.6z"/></svg></span>
+          <span><span class="bot-kind">Custom GPT · 1K+ conversations</span><span class="bot-name">AI Carousel Creative Director</span><span class="bot-desc">On-brand Instagram carousels from your idea</span></span>
+          <svg class="arrow" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5"/></svg>
+        </a>
+        <a class="bot" href="https://chatgpt.com/g/g-69ac4bfacfac8191b31e3e6057b27150-cinematic-scene-builder" target="_blank" rel="noopener">
+          <span class="bot-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5l2.6 6.4 6.9.6-5.2 4.6 1.6 6.8L12 16.3l-5.9 3.6 1.6-6.8L2.5 8.5l6.9-.6z"/></svg></span>
+          <span><span class="bot-kind">Custom GPT</span><span class="bot-name">Cinematic Scene Builder</span><span class="bot-desc">Cinematic concepts, prompts and scene ideas</span></span>
+          <svg class="arrow" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5"/></svg>
+        </a>
+        <a class="bot" href="https://t.me/creative_ai_news" target="_blank" rel="noopener">
+          <span class="bot-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></span>
+          <span><span class="bot-kind">Telegram bot</span><span class="bot-name">@creative_ai_news</span><span class="bot-desc">Daily news on creative AI tools</span></span>
+          <svg class="arrow" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5"/></svg>
+        </a>
+        <a class="bot" href="https://t.me/ai_agents_daily" target="_blank" rel="noopener">
+          <span class="bot-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg></span>
+          <span><span class="bot-kind">Telegram bot</span><span class="bot-name">@ai_agents_daily</span><span class="bot-desc">Daily news on AI agents</span></span>
+          <svg class="arrow" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5"/></svg>
+        </a>
+      </nav>
+      <p class="bots-note">The Telegram bots collect and deliver AI news automatically — built with Python and GitHub using AI coding assistants.</p>
+
+      <a class="portfolio" href="https://ainataliale.pages.dev/" target="_blank" rel="noopener">
+        <span>
+          <span class="portfolio-eyebrow">Explore projects, cases &amp; experiments</span>
+          <span class="portfolio-title">View<br>portfolio</span>
+        </span>
+        <svg class="arrow" viewBox="0 0 56 24" aria-hidden="true"><path d="M0 12h54M43 1l11 11-11 11"/></svg>
+      </a>
+    </main>
+
+    <footer>
+      <p>Want a site or a bot like these? <a href="https://t.me/NataliLe" target="_blank" rel="noopener">Telegram @NataliLe</a></p>
+      <p class="footer-meta">Natalia Le · Riga, Latvia</p>
+    </footer>
+
+  </div>
+</body>
+</html>
