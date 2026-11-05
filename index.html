@@ -188,8 +188,8 @@
     .hl::after {
       content: '';
       position: absolute;
-      left: 18%;
-      right: -20%;
+      left: -8%;
+      right: -14%;
       bottom: -0.14em;
       height: 0.3em;
       z-index: -1;
@@ -236,7 +236,7 @@
     /* ===== Карточки направлений ===== */
     .works {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 12px;
     }
 
@@ -558,8 +558,7 @@
 
     /* ===== Адаптив ===== */
     @media (max-width: 1100px) {
-      .works { grid-template-columns: repeat(2, 1fr); }
-      .work-title { font-size: clamp(1.6rem, 4.2vw, 2.4rem); }
+      .work-title { font-size: clamp(1.4rem, 3vw, 2.2rem); }
       .socials { grid-template-columns: repeat(3, 1fr); row-gap: 18px; }
       .social:nth-child(4)::before { display: none; }
     }
@@ -621,7 +620,7 @@
       <div class="hero-text">
         <h1 class="headline reveal" style="--d:.15s">
           Script<span class="arr" aria-hidden="true">→</span>Image<span class="arr" aria-hidden="true">→</span><br>
-          Video<span class="arr" aria-hidden="true">→</span><span class="hl">Sound</span>
+          Video<span class="arr" aria-hidden="true">→</span>Sound<span class="arr" aria-hidden="true">→</span><span class="hl">Web</span>
         </h1>
         <p class="lede reveal" style="--d:.3s">A creative playground for AI visuals, music &amp; digital experiments.</p>
       </div>
@@ -632,19 +631,19 @@
       <p class="section-label reveal" style="--d:.35s">Explore the work</p>
       <nav class="works" aria-label="Направления">
 
-        <a class="work reveal" style="--d:.4s" href="https://www.instagram.com/nataliale.vivid" target="_blank" rel="noopener">
-          <span class="work-img"><img src="img/card-visuals.jpg" alt="" width="800" height="455" loading="lazy"></span>
-          <span class="work-body">
-            <span class="work-title">AI Visuals</span>
-            <span class="work-sub">Concepts, prompts &amp; visual experiments <svg class="arrow" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5"/></svg></span>
-          </span>
-        </a>
-
-        <a class="work reveal" style="--d:.47s" href="https://ainataliale.pages.dev/work.html" target="_blank" rel="noopener">
+        <a class="work reveal" style="--d:.4s" href="https://ainataliale.pages.dev/work.html" target="_blank" rel="noopener">
           <span class="work-img"><img src="img/card-video.jpg" alt="" width="800" height="455" loading="lazy"></span>
           <span class="work-body">
             <span class="work-title">Video Lab</span>
             <span class="work-sub">AI video, motion &amp; storytelling <svg class="arrow" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5"/></svg></span>
+          </span>
+        </a>
+
+        <a class="work reveal" style="--d:.47s" href="sites.html">
+          <span class="work-img"><img src="img/card-sites.jpg" alt="" width="800" height="455" loading="lazy"></span>
+          <span class="work-body">
+            <span class="work-title">Sites &amp; Bots</span>
+            <span class="work-sub">Web projects, tools &amp; automations <svg class="arrow" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5"/></svg></span>
           </span>
         </a>
 
@@ -656,17 +655,9 @@
           </span>
           <span class="work-body">
             <span class="work-title">Sound</span>
-            <span class="work-sub">Nathaniel Vampire — My Mortal Thing <svg class="arrow" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5"/></svg></span>
+            <span class="work-sub">AI singer Nathaniel Vampire — My Mortal Thing <svg class="arrow" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5"/></svg></span>
           </span>
         </button>
-
-        <a class="work reveal" style="--d:.61s" href="sites.html">
-          <span class="work-img"><img src="img/card-sites.jpg" alt="" width="800" height="455" loading="lazy"></span>
-          <span class="work-body">
-            <span class="work-title">Sites &amp; Bots</span>
-            <span class="work-sub">Web projects, tools &amp; automations <svg class="arrow" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5"/></svg></span>
-          </span>
-        </a>
 
       </nav>
 

@@ -247,6 +247,10 @@
       .preview:hover { transform: translateY(-3px); box-shadow: 0 1px 0 var(--line-soft), 0 30px 48px -28px rgba(20, 23, 28, 0.75); }
       .preview:hover .shot img { object-position: 50% 100%; }
     }
+    /* На телефонах — само, когда карточка видна на экране (класс ставит скрипт внизу) */
+    @media (hover: none) {
+      .preview.in-view .shot img { object-position: 50% 100%; }
+    }
     .preview:focus-visible { outline: 2px solid var(--wine); outline-offset: 4px; }
 
     .site-body { padding-top: 18px; }
@@ -375,45 +379,6 @@
 
     .bots-note { margin-top: 12px; font-size: 0.82rem; color: var(--muted); }
 
-    /* ===== Портфолио ===== */
-    .portfolio {
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      gap: 24px;
-      margin-top: 46px;
-      padding: clamp(22px, 3vw, 34px) clamp(22px, 3vw, 38px);
-      background: var(--wine);
-      color: var(--wine-light);
-      text-decoration: none;
-      transition: background 0.3s ease;
-      -webkit-tap-highlight-color: transparent;
-    }
-    .portfolio-eyebrow {
-      display: block;
-      font-size: 0.7rem;
-      font-weight: 600;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
-    .portfolio-title {
-      display: block;
-      font-family: var(--font-serif);
-      font-weight: 400;
-      font-size: clamp(2.1rem, 4.6vw, 3.8rem);
-      line-height: 0.95;
-      letter-spacing: -0.02em;
-      text-transform: uppercase;
-    }
-    .portfolio .arrow { width: 56px; height: 24px; }
-    .portfolio .arrow path { stroke-width: 1.1; }
-    @media (hover: hover) {
-      .portfolio:hover { background: var(--wine-deep); }
-      .portfolio:hover .arrow { transform: translateX(8px); }
-    }
-    .portfolio:focus-visible { outline: 2px solid var(--wine); outline-offset: 4px; }
-
     /* ===== Футер ===== */
     footer {
       display: flex;
@@ -458,9 +423,6 @@
       .lede::before { width: 28px; }
       .section-label { letter-spacing: 0.3em; font-size: 0.72rem; }
       .back { letter-spacing: 0.18em; }
-      .portfolio { align-items: center; }
-      .portfolio-eyebrow { letter-spacing: 0.18em; font-size: 0.62rem; }
-      .portfolio .arrow { width: 40px; }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -538,17 +500,17 @@
         </article>
 
         <article class="site reveal">
-          <a class="preview" href="https://links-lilprompt.vercel.app/" target="_blank" rel="noopener" aria-label="Открыть links-lilprompt.vercel.app">
-            <span class="browser-bar"><i></i><i></i><i></i><span>links-lilprompt.vercel.app</span></span>
-            <span class="shot"><img src="img/sites/lilprompt.jpg" alt="Лендинг Lil Prompt Official" width="800" height="1333" loading="lazy"></span>
+          <a class="preview" href="https://lilprompt-demo.pages.dev/" target="_blank" rel="noopener" aria-label="Открыть lilprompt-demo.pages.dev">
+            <span class="browser-bar"><i></i><i></i><i></i><span>lilprompt-demo.pages.dev</span></span>
+            <span class="shot"><img src="img/sites/lilprompt.jpg" alt="Сайт Lil Prompt Official" width="800" height="833" loading="lazy"></span>
           </a>
           <div class="site-body">
             <span class="site-tag">Landing · For an AI artist</span>
             <h2 class="site-title">Lil Prompt Official</h2>
-            <p class="site-desc">A link-in-bio landing page for AI artist Lil Prompt: all channels,
-            videos and a built-in music player in one place, styled to match his brand.</p>
+            <p class="site-desc">A brand-new link-in-bio site for AI artist Lil Prompt: a dark pink hero collage,
+            a video stage with his clips, music and every channel — over live smoke that drifts after the cursor.</p>
             <div class="site-links">
-              <a href="https://links-lilprompt.vercel.app/" target="_blank" rel="noopener">Visit site <svg class="arrow" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5"/></svg></a>
+              <a href="https://lilprompt-demo.pages.dev/" target="_blank" rel="noopener">Visit site <svg class="arrow" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5"/></svg></a>
             </div>
           </div>
         </article>
@@ -556,13 +518,13 @@
         <article class="site reveal">
           <a class="preview" href="./" aria-label="Открыть главную страницу ссылок">
             <span class="browser-bar"><i></i><i></i><i></i><span>links-nataliale.pages.dev</span></span>
-            <span class="shot"><img src="img/sites/links.jpg" alt="Страница ссылок Natalia Le" width="800" height="697" loading="lazy"></span>
+            <span class="shot"><img src="img/sites/links.jpg" alt="Страница ссылок Natalia Le" width="800" height="708" loading="lazy"></span>
           </a>
           <div class="site-body">
             <span class="site-tag">Link in bio · Personal</span>
             <h2 class="site-title">Natalia Le — Links <span class="here">You are here</span></h2>
-            <p class="site-desc">My own link-in-bio page in an editorial style: AI visuals, video,
-            Nathaniel Vampire’s single, sites and bots, all socials and GPT tools in one place.</p>
+            <p class="site-desc">My own link-in-bio page in an editorial style: video, sites and bots,
+            Nathaniel Vampire’s single and all my socials in one place.</p>
             <div class="site-links">
               <a href="./">Open <svg class="arrow" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5"/></svg></a>
               <a href="https://github.com/natalialeaiart/links" target="_blank" rel="noopener">GitHub <svg class="arrow" viewBox="0 0 28 12" aria-hidden="true"><path d="M0 6h26M21 1l5 5-5 5"/></svg></a>
@@ -636,14 +598,6 @@
         </a>
       </nav>
       <p class="bots-note">The Telegram bots collect and deliver AI news automatically — built with Python and GitHub using AI coding assistants.</p>
-
-      <a class="portfolio" href="https://ainataliale.pages.dev/" target="_blank" rel="noopener">
-        <span>
-          <span class="portfolio-eyebrow">Explore projects, cases &amp; experiments</span>
-          <span class="portfolio-title">View<br>portfolio</span>
-        </span>
-        <svg class="arrow" viewBox="0 0 56 24" aria-hidden="true"><path d="M0 12h54M43 1l11 11-11 11"/></svg>
-      </a>
     </main>
 
     <footer>
@@ -652,5 +606,19 @@
     </footer>
 
   </div>
+  <script>
+    /* Телефоны: превью сайта прокручивается вниз, пока карточка на экране, и возвращается наверх, когда уходит */
+    (function () {
+      if (window.matchMedia('(hover: hover)').matches) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      if (!('IntersectionObserver' in window)) return;
+
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { e.target.classList.toggle('in-view', e.isIntersecting); });
+      }, { threshold: 0.6 });
+
+      document.querySelectorAll('.preview').forEach(function (p) { io.observe(p); });
+    })();
+  </script>
 </body>
 </html>
